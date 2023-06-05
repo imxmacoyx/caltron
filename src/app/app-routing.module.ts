@@ -8,7 +8,8 @@ const routes: Routes = [
     loadChildren: () =>
       loadRemoteModule({
         type: 'module',
-        remoteEntry: 'https://storage.cloud.google.com/mf-autos/remoteEntry.js',
+        remoteEntry: 'http://localhost:4201/remoteEntry.js',
+        // remoteEntry: "http://localhost:4201/remoteEntry.js",
         exposedModule: './ProductsModule',
       }).then((m) => m.ProductsModule),
   },
